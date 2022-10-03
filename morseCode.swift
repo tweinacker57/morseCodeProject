@@ -52,3 +52,24 @@ var morseCodeArray = [String]()
 
 var currMorse = ""
 
+//Create a loop to iterate through morse code and add to morseCodeArray
+
+for char in secretMessage{
+  if char != " " {
+    currMorse.append(char)
+  }else {
+    switch currMorse {
+      case "":
+        currMorse += " "
+      case " ":
+        morseCodeArray.append(" ")
+        currMorse = ""
+      default:
+        morseCodeArray.append(currMorse)
+        currMorse = ""
+    }
+  }
+}
+morseCodeArray.append(currMorse)
+print(morseCodeArray)
+
