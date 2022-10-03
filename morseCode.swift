@@ -79,4 +79,14 @@ var morseToLetter: [String: String] = [:]
 for (letter, morseChar) in morseToLetter {
   morseToLetter[morseChar] = letter
 }
+// Go through each element in morseCodeArray and find the text value via the morseToLetter dictionary
+for morseValue in morseCodeArray {
+    if let letterChar = morseToLetter[morseValue]{
+        decodedMessage += letterChar
+    }
+    else {
+        decodedMessage += " "
+    }
+}
+print (decodedMessage)
 
