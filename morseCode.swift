@@ -33,3 +33,14 @@ var lettersToMorse: [String: String] = [
   "y": "-.--",
   "z": "--.."
 ]
+
+var morseText = ""
+
+for element in englishText {
+  if let morseChar = lettersToMorse["\(element)"] {
+    morseText += morseChar + " "
+  }else {
+    morseText += "   "
+  }
+}
+print(morseText)
