@@ -71,5 +71,12 @@ for char in secretMessage{
   }
 }
 morseCodeArray.append(currMorse)
-print(morseCodeArray)
+
+//Create empty dictionary to store morse code to letter
+var morseToLetter: [String: String] = [:]
+
+//Create loop to loop through empty dictionary
+for (letter, morseChar) in morseToLetter {
+  morseToLetter[morseChar] = letter
+}
 
