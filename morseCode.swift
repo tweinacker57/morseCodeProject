@@ -44,3 +44,11 @@ for element in englishText {
   }
 }
 print(morseText)
+
+//Add empty strings and empty arrays
+var decodedMessage = ""
+
+var morseCodeArray = [String]()
+
+var currMorse = ""
+
